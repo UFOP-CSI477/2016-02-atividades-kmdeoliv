@@ -1,0 +1,98 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="utf-8">
+    <title>Cadastro</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/jqueryui/1.12.1/themes/base/jquery-ui.min.css" integrity="sha256-sEGfrwMkIjbgTBwGLVK38BG/XwIiNC/EAG9Rzsfda6A=" crossorigin="anonymous" />
+    <link rel="stylesheet" href="css/style.css">
+</head>
+
+<body>
+    <header>
+        <div class="container">
+            <h1>Sistema de acompanhamento</h1>
+            <nav>
+                <a href="menu.html">Página inicial</a>
+            </nav>
+        </div>
+    </header>
+    <main class="container">
+        <form method="post">
+            <fieldset>
+                <legend>Dados Pessoais</legend>
+                <label for="nome">Nome:</label>
+                <input type="text" name="nome" placeholder="Nome" required ><br>
+                <label for="cpf">CPF:</label>
+                <input type="number" name="cpf" placeholder="000.000.000-00"><br>
+                <label for="genero">Genero:</label>
+                <input type="radio" name="genero" value="male"> Masculino
+                <input type="radio" name="genero" value="female"> Feminino<br>
+                <label for="areas">Areas de interesse:</label><br>
+                <input type="checkbox" name="areas" value="otimizacao"> Otimização<br>
+                <input type="checkbox" name="areas" value="redes"> Redes<br>
+                <input type="checkbox" name="areas" value="dados"> Banco de dados<br>
+                <input type="checkbox" name="areas" value="software"> Engenharia de Software<br>
+            </fieldset>
+            <fieldset>
+                <legend>Contato</legend>
+                 <label for="telefone">Telefone:</label>
+                <input type="tel" name="telefone" placeholder="38321593"><br>
+                <label for="celular">Celular:</label>
+                <input type="tel" name="celular" placeholder="38321593"><br>
+                <label for="email">Email:</label>
+                <input type="email" name="email" placeholder="Email" ><br>
+            </fieldset>
+            <fieldset>
+                <legend>Endereço</legend>
+                <label for="rua">Rua:</label>
+                <input type="text" name="rua" placeholder="Rua"><br>
+                <label for="numero">Número:</label>
+                <input type="text" name="numero" placeholder="Número"><br>
+                <label for="Complemento">Complemento:</label>
+                <input type="text" name="complemento" placeholder="Complemento"> <br>
+                <label for="cidade">Cidade:</label>
+                <select name="cidade">
+                    <option value="bc">Barão de Cocais</option>
+                    <option value="bh">Belo Horizonte</option>
+                    <option value="jm">João Monlevade</option>
+                    <option value="sb">Santa Bárbara</option>
+                </select> <br>
+                <label for="estado">Estado:</label>
+                <select name="estado">
+                    <option value="mg">Minas Gerais</option>
+                    <option value="es">Espírito Santo</option>
+                    <option value="rj">Rio de Janeiro</option>
+                    <option value="sp">São Paulo</option>
+                </select><br>
+                <label for="cep">Cep:</label>
+                <input type="text" name="cep" placeholder="00000-000">
+            </fieldset>
+            <fieldset>
+                <legend>Login</legend>
+                <label for="usuario">Usuário:</label>
+                <input type="text" name="usuario" placeholder="Usuario" required ><br>
+                <label for="senha">Senha:</label>
+                <input type="password" name="senha" placeholder="Password" required ><br>
+                <label for="confirmacao">Confirmação:</label>
+                <input type="password" name="confirmacao" placeholder="Password" required ><br>
+            </fieldset>
+           <button  type="submit" value="cadastrar" id=myForm> Cadastrar</button>                     
+        </form>
+    </main>
+    <footer>
+        <div class="container">
+            <p>Kelly Márcia de Oliveria</p>
+            <p>Matrícula 13.1.8373</p>
+            <a href="mailto:kmdeoliv@syr.edu" target="_top"> <i class="fa fa-envelope-o" aria-hidden="true"></i> kmdeoliv@syr.edu
+            </a>
+        </div>
+    </footer>
+    <div id="dialog" title="Confirmação">
+        <p>Deseja confirmar seu cadastro?</p>
+    </div>
+    <script src="https://code.jquery.com/jquery-3.1.1.min.js" integrity="sha256-hVVnYaiADRTO2PzUGmuLJr8BLUSjGIZsDYGmIJLv2b8=" crossorigin="anonymous"></script>
+    <script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/jqueryui/1.12.1/jquery-ui.min.js" integrity="sha256-KM512VNnjElC30ehFwehXjx1YCHPiQkOPmqnrWtpccM=" crossorigin="anonymous"></script>
+    <script type="text/javascript" src="js/site.js"></script>
+</body>
+</html>

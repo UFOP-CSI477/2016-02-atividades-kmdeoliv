@@ -1,0 +1,64 @@
+@import 'https://fonts.googleapis.com/css?family=Pavanam';
+@import 'https://fonts.googleapis.com/css?family=Montserrat';
+@import 'https://fonts.googleapis.com/css?family=Poiret+One';
+@import url(https://maxcdn.bootstrapcdn.com/font-awesome/4.6.3/css/font-awesome.min.css);
+
+* {
+    margin: 0;
+    padding: 0;
+}
+
+body {
+    background: url('../images/whitediamond.png');
+    flex-direction: column;
+    display: flex;
+    height: 100vh;
+    width: 100%;
+    justify-content: space-between;
+    font:1.7em 'Pavanam', sans-serif;
+}
+header,
+footer {
+    padding: 10px;
+    background-color: #962038;
+    color: #efefef;
+    width: 100%;
+    font-family: 'Montserrat', cursive;
+
+}
+h1{
+  font-size: 1.8em !important;
+}
+nav.navbar-right {
+    line-height: 50px;
+    padding: 15px 15px;
+    font-size: 18px;
+}
+a, a:hover, a:visited {
+    text-decoration: none;
+    color: #efefef;
+    border: #efefef 1px solid;
+    border-radius: 4px;
+    padding: 6px 12px;
+    margin: 6px;
+}
+footer a , footer a:hover, footer a:focus{
+    border: none;
+    padding: 0;
+    margin: 0;
+    color: #efefef;
+    text-decoration: none;
+}
+main{
+  margin: 15px 0;
+  padding: 15px 0;
+  background: #fdfdfd;
+  box-shadow: rgba(0,0,0,0.5) 1px 3px 10px;
+}
+main p {
+    font-size: 3.5em;
+    font-family: 'Poiret One', cursive;
+}
+.table{
+  margin: 0;
+}

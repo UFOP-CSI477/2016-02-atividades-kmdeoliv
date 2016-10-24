@@ -1,0 +1,155 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>Cadastro</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/jqueryui/1.12.1/themes/base/jquery-ui.min.css" integrity="sha256-sEGfrwMkIjbgTBwGLVK38BG/XwIiNC/EAG9Rzsfda6A=" crossorigin="anonymous" />
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/twitter-bootstrap/3.3.7/css/bootstrap.min.css" integrity="sha256-916EbMg70RQy9LHiGkXzG8hSg9EdNy97GazNG/aiY1w=" crossorigin="anonymous" />
+    <link rel="stylesheet" href="css/style.css">
+</head>
+
+<body>
+  <header>
+      <div class="container">
+          <h1 class="navbar-brand">Sistema de acompanhamento</h1>
+          <nav class="navbar-right">
+              <a href="menu.html">Página inicial</a>
+          </nav>
+      </div>
+    </header>
+    <main class="container">
+        <form method="post" >
+            <fieldset>
+                <legend>Dados Pessoais</legend>
+                <div class="form-group">
+                    <label for="nome">Nome:</label>
+                      <input type="text" class="form-control " name="nome" placeholder="Nome" required>
+                </div>
+                <div class="form-group">
+                    <label for="cpf" >CPF:</label>
+                    <input type="number"class="form-control" name="cpf" placeholder="000.000.000-00">
+                </div>
+                <div class="form-group">
+                    <label for="genero">Genero:</label>
+                    <input type="radio" name="genero" value="male"> Masculino
+                    <input type="radio" name="genero" value="female"> Feminino
+                </div>
+                <div class="form-group">
+                    <label for="areas">Areas de interesse:</label>
+                    <br>
+                    <input type="checkbox" name="areas" value="otimizacao"> Otimização
+                    <br>
+                    <input type="checkbox" name="areas" value="redes"> Redes
+                    <br>
+                    <input type="checkbox" name="areas" value="dados"> Banco de dados
+                    <br>
+                    <input type="checkbox" name="areas" value="software"> Engenharia de Software
+                    <br>
+                </div>
+            </fieldset>
+            <fieldset>
+                <legend>Contato</legend>
+                <div class="form-group">
+                    <label for="telefone">Telefone:</label>
+                    <input type="tel" class="form-control" name="telefone" placeholder="38321593">
+                </div>
+                <div class="form-group">
+                    <label for="celular">Celular:</label>
+                    <input type="tel" class="form-control"  name="celular" placeholder="38321593">
+                </div>
+                <div class="form-group">
+                    <label for="email">Email:</label>
+                    <input type="email" class="form-control" name="email" placeholder="Email">
+                </div>
+            </fieldset>
+            <fieldset>
+                <legend>Endereço</legend>
+                <div class="form-group">
+                    <label for="rua">Rua:</label>
+                    <input type="text" class="form-control" name="rua" placeholder="Rua">
+                </div>
+                <div class="form-group">
+                    <label for="numero">Número:</label>
+                    <input type="text" class="form-control" name="numero" placeholder="Número">
+                </div>
+                <div class="form-group">
+                    <label for="Complemento">Complemento:</label>
+                    <input type="text" class="form-control" name="complemento" placeholder="Complemento">
+                </div>
+                <div class="form-group">
+                    <label for="cidade">Cidade:</label>
+                    <select name="cidade">
+                        <option value="bc">Barão de Cocais</option>
+                        <option value="bh">Belo Horizonte</option>
+                        <option value="jm">João Monlevade</option>
+                        <option value="sb">Santa Bárbara</option>
+                    </select>
+                </div>
+
+                <div class="form-group">
+                    <label for="estado">Estado:</label>
+                    <select name="estado">
+                        <option value="mg">Minas Gerais</option>
+                        <option value="es">Espírito Santo</option>
+                        <option value="rj">Rio de Janeiro</option>
+                        <option value="sp">São Paulo</option>
+                    </select>
+                </div>
+                <div class="form-group">
+                    <label for="cep">Cep:</label>
+                    <input type="text" class="form-control" name="cep" placeholder="00000-000">
+                </div>
+            </fieldset>
+            <fieldset>
+                <legend>Login</legend>
+                <div class="form-group">
+                    <label for="usuario">Usuário:</label>
+                    <input type="text" class="form-control" name="usuario" placeholder="Usuario" required>
+                </div>
+                <div class="form-group">
+                    <label for="senha">Senha:</label>
+                    <input type="password" class="form-control" name="senha" placeholder="Password" required>
+                </div>
+                <div class="form-group">
+                    <label for="confirmacao">Confirmação:</label>
+                    <input type="password" class="form-control" name="confirmacao" placeholder="Password" required>
+                </div>
+            </fieldset>
+            <button type="submit" class="btn btn-default" data-toggle="modal"  id=myForm> Cadastrar</button>
+
+        </form>
+    </main>
+    <footer>
+        <div class="container">
+            <p>Kelly Márcia de Oliveria</p>
+            <p>Matrícula 13.1.8373</p>
+            <a href="mailto:kmdeoliv@syr.edu" target="_top"> <i class="fa fa-envelope-o" aria-hidden="true"></i> kmdeoliv@syr.edu
+            </a>
+        </div>
+    </footer>
+    <div class="modal fade" id="myModal" tabindex="-1" role="dialog" aria-labelledby="myModalLabel">
+  <div class="modal-dialog" role="document">
+    <div class="modal-content">
+      <div class="modal-header">
+        <button type="button" class="close" data-dismiss="modal" aria-label="Close"><span aria-hidden="true">&times;</span></button>
+        <h4 class="modal-title" id="myModalLabel">Confirmação</h4>
+      </div>
+      <div class="modal-body">
+        <p> Deseja confirmar o cadastro?</p>
+      </div>
+      <div class="modal-footer">
+        <button type="button" class="btn btn-default" data-dismiss="modal">Cancelar</button>
+        <button type="button" class="btn btn-primary">Confirmar</button>
+      </div>
+    </div>
+  </div>
+</div>
+    <script src="https://code.jquery.com/jquery-3.1.1.min.js" integrity="sha256-hVVnYaiADRTO2PzUGmuLJr8BLUSjGIZsDYGmIJLv2b8=" crossorigin="anonymous"></script>
+    <script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/twitter-bootstrap/3.3.7/js/bootstrap.min.js" integrity="sha256-U5ZEeKfGNOja007MMD3YBI0A3OSZOQbeG6z2f2Y0hu8=" crossorigin="anonymous"></script>
+    <script type="text/javascript" src="js/site.js"></script>
+</body>
+
+</html>
