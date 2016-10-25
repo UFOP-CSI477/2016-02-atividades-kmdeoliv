@@ -1,0 +1,31 @@
+@import url(https://maxcdn.bootstrapcdn.com/font-awesome/4.6.3/css/font-awesome.min.css);
+
+body{
+	display: flex !important;
+	flex-direction: column;
+	justify-content: space-between;
+	min-height: 100vh;
+}
+
+header{
+	box-shadow: #bbb 2px 0 5px;	
+}
+
+header, footer{
+	background: url('../images/whitediamond.png');
+}
+
+main{
+	padding: 15px 0;
+}
+
+footer{
+	padding: 15px 0;
+	display: flex;
+	align-items: center;
+	box-shadow: #bbb -2px 0 5px;	
+}
+
+a:hover,a:visited,a:focus{
+	text-decoration: none;
+}

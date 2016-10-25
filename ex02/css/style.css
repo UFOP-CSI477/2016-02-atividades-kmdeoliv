@@ -12,7 +12,7 @@ body {
     background: url('../images/whitediamond.png');
     flex-direction: column;
     display: flex;
-    height: 100vh;
+    min-height: 100vh;
     width: 100%;
     justify-content: space-between;
     font:1.7em 'Pavanam', sans-serif;
@@ -27,12 +27,16 @@ footer {
 
 }
 h1{
-  font-size: 1.8em !important;
+  font-size: 1.6em !important;
 }
-nav.navbar-right {
-    line-height: 50px;
-    padding: 15px 15px;
-    font-size: 18px;
+
+header div{
+    display: flex;
+    justify-content: space-between;
+    align-items: baseline;
+}
+h1, nav{
+    display: inline;
 }
 a, a:hover, a:visited {
     text-decoration: none;
@@ -51,14 +55,17 @@ footer a , footer a:hover, footer a:focus{
 }
 main{
   margin: 15px 0;
-  padding: 15px 0;
-  background: #fdfdfd;
-  box-shadow: rgba(0,0,0,0.5) 1px 3px 10px;
+  padding: 0 15px;
 }
 main p {
-    font-size: 3.5em;
+    font-size: 3em;
     font-family: 'Poiret One', cursive;
 }
 .table{
   margin: 0;
+}
+
+div.container::before, div.container::after{
+    display: none;
+    content: none;
 }

@@ -1,1 +1,103 @@
+<!DOCTYPE html>
+<html lang="en">
 
+<head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>Cadastro</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/jqueryui/1.12.1/themes/base/jquery-ui.min.css" integrity="sha256-sEGfrwMkIjbgTBwGLVK38BG/XwIiNC/EAG9Rzsfda6A=" crossorigin="anonymous" />
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/twitter-bootstrap/3.3.7/css/bootstrap.min.css" integrity="sha256-916EbMg70RQy9LHiGkXzG8hSg9EdNy97GazNG/aiY1w=" crossorigin="anonymous" />
+    <link rel="stylesheet" href="css/site.css">
+</head>
+
+<body>
+  <header>
+      <div class="container">
+          <h1>Cadastro<h1>
+      </div>
+    </header>
+    <main class="container">
+        <form method="post" action="form.php" >
+            <fieldset>
+                <legend>Dados Pessoais</legend>
+                <div class="form-group">
+                    <label for="nome">Nome:</label>
+                      <input type="text" class="form-control " name="nome">
+                </div>
+                <div class="form-group">
+                    <label for="cpf" >CPF:</label>
+                    <input type="number"class="form-control" name="cpf">
+                </div>
+                <div class="form-group">
+                    <label for="genero">Genero:</label>
+                    <input type="radio" name="genero" value="Masculino"> Masculino
+                    <input type="radio" name="genero" value="Feminino"> Feminino
+                </div>
+                <div class="form-group">
+                    <label for="areas">Areas de interesse:</label>
+                    <br>
+                    <input type="checkbox" name="areas[]" value="Otimização"> Otimização
+                    <br>
+                    <input type="checkbox" name="areas[]" value="Redes"> Redes
+                    <br>
+                    <input type="checkbox" name="areas[]" value="Banco de dados"> Banco de dados
+                    <br>
+                    <input type="checkbox" name="areas[]" value="Engenharia de Software"> Engenharia de Software
+                    <br>
+                </div>
+            </fieldset>
+            <fieldset>
+                <legend>Contato</legend>
+                <div class="form-group">
+                    <label for="telefone">Telefone:</label>
+                    <input type="tel" class="form-control" name="telefone">
+                </div>
+                <div class="form-group">
+                    <label for="celular">Celular:</label>
+                    <input type="tel" class="form-control"  name="celular">
+                </div>
+                <div class="form-group">
+                    <label for="email">Email:</label>
+                    <input type="email" class="form-control" name="email">
+                </div>
+            </fieldset>
+            
+            <button type="submit" class="btn btn-default"> Cadastrar</button>
+
+        </form>
+    </main>
+    <footer>
+        <div class="container">
+            <p>Kelly Márcia de Oliveria</p>
+            <p>Matrícula 13.1.8373</p>
+            <a href="mailto:kmdeoliv@syr.edu" target="_top"> <i class="fa fa-envelope-o" aria-hidden="true"></i> kmdeoliv@syr.edu
+            </a>
+        </div>
+    </footer>
+   
+    <script src="https://code.jquery.com/jquery-3.1.1.min.js" integrity="sha256-hVVnYaiADRTO2PzUGmuLJr8BLUSjGIZsDYGmIJLv2b8=" crossorigin="anonymous"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery-validate/1.15.1/jquery.validate.min.js" integrity="sha256-uUVS/d3xM3l8YmucAkj1DeRt6U4Y+Xv3ePUgVVEVmVw=" crossorigin="anonymous"></script>
+
+    <script>
+        $(function(){
+            $("form").validate({
+                rules:{
+                    nome: "required",
+                    cpf:{
+                        required: true,
+                        minlength: 9,
+                        maxlength: 9
+                    },
+                    'areas[]': "required",
+                    genero: "required",
+                    telefone: "required",
+                    celular: "required",
+                    email: "required"
+                },
+            });
+        });
+    </script>
+</body>
+
+</html>
